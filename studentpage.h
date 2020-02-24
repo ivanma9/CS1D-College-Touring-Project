@@ -2,6 +2,11 @@
 #define STUDENTPAGE_H
 
 #include <QMainWindow>
+#include <QtSql>
+#include <QSqlQuery>
+#include <QInputDialog>
+#include <QIntValidator>
+
 #include "dbmanager.h"
 
 namespace Ui {
@@ -110,6 +115,15 @@ private slots:
      * ui
      ************************************************************/
     void on_done_button_clicked();
+
+    /************************************************************
+     * on_viewCampusBtn_clicked() - This button displays the
+     * Distances database table onto the UI table view. The
+     * QSqlQuery pointer variable view is used to determine which
+     * database table we want to use. After this, the table gets
+     * outtputed by the QSqlQueryModel pointer variable model.
+     ************************************************************/
+    void on_viewCampusBtn_clicked();
 
 private:
     QVector<QString> selectedCampuses; //vector of selected campuses
