@@ -236,4 +236,26 @@ void studentpage::calcTotalDist()
     }
 }
 
+/************************************************************
+ * on_viewCampusBtn_clicked() - This button displays the
+ * Distances database table onto the UI table view. The
+ * QSqlQuery pointer variable view is used to determine which
+ * database table we want to use. After this, the table gets
+ * outtputed by the QSqlQueryModel pointer variable model.
+ ************************************************************/
+void studentpage::on_viewCampusBtn_clicked()
+{
+    QSqlQueryModel * model = new QSqlQueryModel();
+
+    QSqlQuery* view = new QSqlQuery();
+
+    view->prepare("SELECT * FROM Distances ORDER by distStart ASC");
+
+    view->exec();
+    model->setQuery(*view);
+
+    ui->tableView->setModel(model);
+
+}
+
 
