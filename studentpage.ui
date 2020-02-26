@@ -192,7 +192,7 @@
      <widget class="QPushButton" name="viewCampusBtn">
       <property name="geometry">
        <rect>
-        <x>410</x>
+        <x>630</x>
         <y>380</y>
         <width>112</width>
         <height>34</height>
@@ -215,7 +215,7 @@
        <string>View New Campus</string>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>41</x>
@@ -232,6 +232,19 @@
         <widget class="QTableView" name="tableView"/>
        </item>
       </layout>
+     </widget>
+     <widget class="QPushButton" name="viewSaddlebackBtn">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>380</y>
+        <width>112</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>view Saddleback</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="SortCollegeTour">
@@ -277,7 +290,7 @@
      <x>0</x>
      <y>0</y>
      <width>895</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
