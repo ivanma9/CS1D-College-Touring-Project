@@ -253,9 +253,27 @@ void studentpage::on_viewCampusBtn_clicked()
 
     view->exec();
     model->setQuery(*view);
-
     ui->tableView->setModel(model);
 
 }
 
+/************************************************************
+ * on_viewSaddlebackBtn_clicked() - This button displays the
+ * Distances from Saddleback database table onto the UI table view.
+ * The QSqlQuery pointer variable view is used to determine which
+ * database table we want to use. After this, the table gets
+ * outtputed by the QSqlQueryModel pointer variable model.
+ ************************************************************/
+void studentpage::on_viewSaddlebackBtn_clicked()
+{
+    QSqlQueryModel * model = new QSqlQueryModel();
 
+    QSqlQuery* view = new QSqlQuery();
+
+    view->prepare("SELECT * FROM Distances WHERE distStart='Saddleback College' ");
+
+    view->exec();
+    model->setQuery(*view);
+    ui->tableView->setModel(model);
+
+}
