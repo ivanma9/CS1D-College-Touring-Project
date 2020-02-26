@@ -125,6 +125,15 @@ private slots:
      ************************************************************/
     void on_viewCampusBtn_clicked();
 
+    /************************************************************
+     * on_viewSaddlebackBtn_clicked() - This button displays the
+     * Distances from Saddleback database table onto the UI table view.
+     * The QSqlQuery pointer variable view is used to determine which
+     * database table we want to use. After this, the table gets
+     * outtputed by the QSqlQueryModel pointer variable model.
+     ************************************************************/
+    void on_viewSaddlebackBtn_clicked();
+
 private:
     QVector<QString> selectedCampuses; //vector of selected campuses
     QVector<QString> sortedCampuses; //vector of the sorted campuses
